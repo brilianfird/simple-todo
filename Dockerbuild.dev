@@ -1,0 +1,11 @@
+FROM golang:alpine AS build-env
+
+WORKDIR $HOME/app
+
+COPY main ./main
+COPY conf.json .
+COPY go.mod .
+
+WORKDIR main
+
+CMD ["go", "run", "main.go"]

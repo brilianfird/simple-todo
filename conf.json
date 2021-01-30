@@ -1,0 +1,4 @@
+{
+  "URI": "mongodb://mongo:27017",
+  "DatabaseName": "todo"
+}
