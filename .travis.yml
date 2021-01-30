@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t brilianfird/to-do -f Dockerfile.dev .
+
+script:
+  - docker run brilianfird/to-do go test

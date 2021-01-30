@@ -2,6 +2,8 @@ FROM golang:alpine AS build-env
 
 WORKDIR $HOME/app
 
+ENV CGO_ENABLED=0
+
 COPY main ./main
 COPY conf.json .
 COPY go.mod .
